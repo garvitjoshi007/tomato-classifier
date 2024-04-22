@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomato Disease Classification - Result</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Custom Styles */
+        body {
+            background-color:#D3D9D4 ;
+            color: #212A31;
+        }
+        .container {
+            max-width: 800px;
+        }
+        .navbar {
+            background-color: #D3D9D4;
+        }
+        .navbar-light .navbar-nav .nav-link {
+            color: #212A31;
+        }
+        .navbar-light .navbar-nav .nav-link:hover {
+            color: #212A31;
+        }
+        .navbar-light .navbar-brand {
+            color: #212A31;
+        }
+        .navbar-light .navbar-brand:hover {
+            color: #212A31;
+        }
+        .alert {
+            background-color: #343A40;
+            border-color: #343A40;
+            color: #D3D9D4;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <h1>
+            Tomato Disease Classification
+            <small class="text-muted">A Machine Learning Approach</small>
+        </h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2>Result</h2>
+        <div class="alert alert-success" role="alert">
+            <strong>Predicted Class:</strong> {{ predicted_class }}
+        </div>
+        <!-- Optional: Add a button to go back to the upload page -->
+        <a href="{% url 'upload_image' %}" class="btn btn-primary">Upload Another Image</a>
+    </div>
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
